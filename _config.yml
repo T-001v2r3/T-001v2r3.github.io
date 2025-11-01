@@ -1,0 +1,21 @@
+title: "T-001v2r3"
+email: ""
+description: "Personal site"
+baseurl: ""
+url: "https://T-001v2r3.github.io"
+theme: minima
+markdown: kramdown
+permalink: /:categories/:title/
+paginate: 5
+
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "About"
+    url: "/about/"
+
+author:
+  name: "T-001v2r3"
+  email: ""
