@@ -1,5 +1,4 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   darkMode: 'class',
   theme: {
@@ -18,51 +17,6 @@ export default {
           900: '#0c4a6e',
         },
       },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            color: theme('colors.gray.700'),
-            a: {
-              color: theme('colors.primary.600'),
-              '&:hover': {
-                color: theme('colors.primary.700'),
-              },
-            },
-          },
-        },
-        dark: {
-          css: {
-            color: theme('colors.gray.300'),
-            a: {
-              color: theme('colors.primary.400'),
-              '&:hover': {
-                color: theme('colors.primary.300'),
-              },
-            },
-            h1: {
-              color: theme('colors.gray.100'),
-            },
-            h2: {
-              color: theme('colors.gray.100'),
-            },
-            h3: {
-              color: theme('colors.gray.100'),
-            },
-            h4: {
-              color: theme('colors.gray.100'),
-            },
-            strong: {
-              color: theme('colors.gray.100'),
-            },
-            code: {
-              color: theme('colors.gray.100'),
-            },
-            blockquote: {
-              color: theme('colors.gray.300'),
-            },
-          },
-        },
-      }),
     },
   },
   plugins: [],
