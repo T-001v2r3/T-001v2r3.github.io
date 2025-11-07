@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text-base: 31 41 55; /* gray-800 */
+    --color-text-muted: 107 114 128; /* gray-500 */
+    --color-bg-base: 255 255 255; /* white */
+    --color-bg-muted: 249 250 251; /* gray-50 */
+  }
+
+  :root.dark {
+    --color-text-base: 243 244 246; /* gray-100 */
+    --color-text-muted: 156 163 175; /* gray-400 */
+    --color-bg-base: 17 24 39; /* gray-900 */
+    --color-bg-muted: 31 41 55; /* gray-800 */
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+    @apply transition-colors duration-200;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+
+  /* Skip to content link */
+  .skip-to-content {
+    @apply absolute -top-10 left-0 bg-primary-600 text-white px-4 py-2 z-50;
+    @apply focus:top-0;
+  }
+}
+
+@layer components {
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose pre {
+    @apply bg-gray-800 dark:bg-gray-950 rounded-lg p-4 overflow-x-auto;
+  }
+
+  .prose code {
+    @apply text-sm bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .prose img {
+    @apply rounded-lg shadow-md;
+  }
+
+  .prose a {
+    @apply text-primary-600 dark:text-primary-400 hover:underline;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    @apply font-bold text-gray-900 dark:text-gray-100;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300;
+  }
+}
