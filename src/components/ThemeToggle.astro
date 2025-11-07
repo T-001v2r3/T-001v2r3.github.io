@@ -67,8 +67,8 @@
     // Update icon based on current theme
     function updateIcon() {
       const isDark = document.documentElement.classList.contains('dark');
-      sunIcon.classList.toggle('hidden', !isDark);
-      moonIcon.classList.toggle('hidden', isDark);
+      sunIcon!.classList.toggle('hidden', !isDark);
+      moonIcon!.classList.toggle('hidden', isDark);
     }
 
     updateIcon();
