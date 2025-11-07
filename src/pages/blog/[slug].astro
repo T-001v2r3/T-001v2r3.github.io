@@ -1,0 +1,113 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'blog'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BaseLayout
+  title={`${entry.data.title} - T-001v2r3`}
+  description={entry.data.description}
+  image={entry.data.coverImage}
+  article={true}
+  publishedTime={entry.data.date.toISOString()}
+  tags={entry.data.tags}
+>
+  <article class="bg-white dark:bg-gray-900 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Back to Blog Link -->
+      <div class="mb-8">
+        <a
+          href="/blog"
+          class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
+        >
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+          Back to Blog
+        </a>
+      </div>
+
+      <!-- Article Header -->
+      <header class="mb-8">
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          {entry.data.title}
+        </h1>
+        
+        <div class="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400 mb-6">
+          <time datetime={entry.data.date.toISOString()} class="flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            {entry.data.date.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </time>
+        </div>
+
+        {entry.data.tags && entry.data.tags.length > 0 && (
+          <div class="flex flex-wrap gap-2 mb-6">
+            {entry.data.tags.map((tag) => (
+              <span class="px-3 py-1 text-sm font-medium rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {entry.data.coverImage && (
+          <img
+            src={entry.data.coverImage}
+            alt={entry.data.title}
+            class="w-full h-auto rounded-lg shadow-lg mb-8"
+          />
+        )}
+      </header>
+
+      <!-- Article Content -->
+      <div class="prose prose-lg max-w-none dark:prose-dark
+        prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100
+        prose-p:text-gray-700 dark:prose-p:text-gray-300
+        prose-a:text-primary-600 dark:prose-a:text-primary-400
+        prose-strong:text-gray-900 dark:prose-strong:text-gray-100
+        prose-code:text-gray-900 dark:prose-code:text-gray-100
+        prose-pre:bg-gray-800 dark:prose-pre:bg-gray-950
+        prose-blockquote:border-primary-500
+        prose-img:rounded-lg prose-img:shadow-md
+      ">
+        <Content />
+      </div>
+
+      <!-- Article Footer -->
+      <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <div class="flex justify-between items-center">
+          <a
+            href="/blog"
+            class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to all posts
+          </a>
+        </div>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
