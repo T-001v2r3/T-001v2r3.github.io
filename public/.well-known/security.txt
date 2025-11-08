@@ -1,0 +1,9 @@
+# security.txt for Gustavo Alves
+Contact: mailto:galves46@proton.me
+Encryption: -----BEGIN PGP PUBLIC KEY BLOCK-----
+# Add your PGP public key or fingerprint here
+-----END PGP PUBLIC KEY BLOCK-----
+Acknowledgement: https://hackerone.com/galves46
+Preferred-Languages: en
+Policy: /security-policy
+Expires: 2026-11-01T00:00:00.000Z

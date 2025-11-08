@@ -11,90 +11,129 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <!-- Header -->
       <div class="text-center mb-12">
         <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-          About Me
+          Gustavo Alves
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-400">
-          Welcome! Let me introduce myself.
+          <strong>Software Developer · Security Analyst Aspirant · Game Scripting</strong>
         </p>
+
+        <div class="mt-6 flex items-center justify-center gap-3">
+          <img src="https://img.shields.io/badge/TryHackMe-Top%202%25-1abc9c" alt="TryHackMe" class="h-6" />
+          <img src="https://img.shields.io/badge/HackerOne-Bounty%20Hunter-ff69b4" alt="HackerOne" class="h-6" />
+          <img src="https://img.shields.io/badge/GitHub-Profile-181717" alt="GitHub" class="h-6" />
+        </div>
+
+        <div class="mt-6 flex items-center justify-center gap-3">
+          <a href="/resume.pdf" class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-500 transition-colors" download>
+            Download CV (PDF)
+          </a>
+          <a href="mailto:galves46@proton.me?subject=Opportunity%20Inquiry" class="inline-flex items-center px-4 py-2 border border-primary-600 text-primary-600 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors">
+            Contact me
+          </a>
+        </div>
+      
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Gustavo Alves",
+            "jobTitle": "Software Developer, Cyber Security Analyst",
+            "email": "mailto:galves46@proton.me",
+            "sameAs": [
+              "https://www.linkedin.com/in/galves46",
+              "https://github.com/T-001v2r3",
+              "https://hackerone.com/aka_qual",
+              "https://tryhackme.com/p/qual"
+            ]
+          }
+        </script>
       </div>
 
       <!-- Content -->
       <div class="prose prose-lg max-w-none dark:prose-dark">
         <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 mb-8 border border-gray-200 dark:border-gray-700">
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            Hello, I'm T-001v2r3
-          </h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
           <p class="text-gray-700 dark:text-gray-300 mb-4">
-            Welcome to my personal website! This is a space where I share my thoughts,
-            experiences, and projects with the world.
+            Gustavo Alves — Software Developer & Cyber Security Analyst based in Porto, Portugal.
+            I combine low-level programming expertise from 42 Network with hands-on vulnerability research,
+            bug bounty experience, and practical SOC skills from TryHackMe labs. I focus on monitoring, threat
+            detection, secure server engineering, and improving system resilience.
           </p>
-          <p class="text-gray-700 dark:text-gray-300">
-            I'm passionate about technology, learning, and creating things that make a difference.
-            This site serves as both a portfolio and a blog where I document my journey.
+          <p class="text-gray-700 dark:text-gray-300 mb-2">Contact: <a href="mailto:galves46@proton.me" class="text-primary-600 dark:text-primary-400 hover:underline">galves46@proton.me</a></p>
+          <p class="text-gray-700 dark:text-gray-300">Profiles:
+            <a href="https://www.linkedin.com/in/galves46" target="_blank" rel="noopener noreferrer" class="text-primary-600 dark:text-primary-400 hover:underline">LinkedIn</a>
+            • <a href="https://github.com/T-001v2r3" target="_blank" rel="noopener noreferrer" class="text-primary-600 dark:text-primary-400 hover:underline">GitHub</a>
+            • <a href="https://hackerone.com/aka_qual" target="_blank" rel="noopener noreferrer" class="text-primary-600 dark:text-primary-400 hover:underline">HackerOne</a>
+            • <a href="https://tryhackme.com/p/qual" target="_blank" rel="noopener noreferrer" class="text-primary-600 dark:text-primary-400 hover:underline">TryHackMe</a>
           </p>
         </div>
 
         <div class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            What I Do
-          </h2>
-          <p class="text-gray-700 dark:text-gray-300 mb-4">
-            I work on various projects and share my learnings through blog posts. My interests include:
-          </p>
-          <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 mb-4">
-            <li>Software development and engineering</li>
-            <li>Web technologies and modern frameworks</li>
-            <li>Open source contributions</li>
-            <li>Continuous learning and self-improvement</li>
-          </ul>
-        </div>
-
-        <div class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            This Website
-          </h2>
-          <p class="text-gray-700 dark:text-gray-300 mb-4">
-            This site is built with modern technologies to provide a fast, accessible, and
-            pleasant reading experience:
-          </p>
-          <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 mb-4">
-            <li><strong>Astro</strong> - A modern static site generator</li>
-            <li><strong>TypeScript</strong> - For type-safe code</li>
-            <li><strong>Tailwind CSS</strong> - For beautiful, responsive styling</li>
-            <li><strong>GitHub Pages</strong> - For reliable hosting and deployment</li>
-          </ul>
-          <p class="text-gray-700 dark:text-gray-300">
-            The site features a dark/light theme toggle, RSS feed, and is fully responsive
-            across all devices.
-          </p>
-        </div>
-
-        <div class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            Get In Touch
-          </h2>
-          <p class="text-gray-700 dark:text-gray-300 mb-4">
-            Feel free to explore my blog and read about my projects and experiences.
-            You can also subscribe to my <a href="/rss.xml" class="text-primary-600 dark:text-primary-400 hover:underline">RSS feed</a> to
-            stay updated with new posts.
-          </p>
-          
-          <!-- Optional: Add social links or contact information here -->
-          <div class="mt-6 flex flex-wrap gap-4">
-            <!-- Example: Uncomment and customize as needed
-            <a
-              href="https://github.com/yourusername"
-              class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
-              </svg>
-              GitHub
-            </a>
-            -->
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Core Skills</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700 dark:text-gray-300">
+            <ul class="list-disc list-inside space-y-2">
+              <li><strong>Cybersecurity:</strong> Vulnerability research, bug bounties, OWASP mitigations, SIEM basics, threat detection, incident response</li>
+              <li><strong>Programming:</strong> C, C++, Python, JavaScript, Lua, Bash, Solidity, SQL</li>
+              <li><strong>Security Tools:</strong> Wireshark, Nmap, Burp Suite, Splunk/ELK (basics)</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-2">
+              <li><strong>DevOps & Infra:</strong> Linux admin, Docker, Cloud (GCP, Oracle, Cloudflare), Databases (Postgres, MySQL)</li>
+              <li><strong>Game Scripting:</strong> CitizenFX/RedM, Godot, Unreal Engine — secure server-side validation & anti-cheat practices</li>
+              <li><strong>Data & Analytics:</strong> NumPy, Plotly, scraping for intel, basic data workflows for dashboards</li>
+            </ul>
           </div>
+        </div>
+
+        <div class="mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Professional Experience</h2>
+          <div class="space-y-4 text-gray-700 dark:text-gray-300">
+            <div>
+              <h3 class="font-semibold">E-commerce Owner & Lua Script Developer — 2023–2025</h3>
+              <p class="text-sm">Operated an e-commerce platform selling custom Lua scripts to game-server operators (200+ clients). Performed log monitoring, applied patches, and mitigated vulnerabilities.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold">Lua Script Developer (CitizenFX) — 2022</h3>
+              <p class="text-sm">Built secure server-side Lua scripts for Rockstar's RAGE Engine and CitizenFX. Implemented server-side validation and anti-exploit measures.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold">Server Administrator — 2019–2021</h3>
+              <p class="text-sm">Managed Linux-based game servers and databases with 99.9% uptime; performed security audits, firewall configuration, and log-based anomaly detection.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Education & Training</h2>
+          <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+            <li><strong>42 Network</strong> — Advanced Curriculum (in progress). Projects include secure token on Ethereum, data science for security analytics, and secure systems programming.</li>
+            <li><strong>42 Network</strong> — Piscine & Common Core Graduate (2022–2024). Focus: C, system design, networking, and secure programming projects.</li>
+            <li><strong>TryHackMe</strong> — Ongoing labs: SOC L1 pathways, network analysis, SIEM simulations, incident response exercises.</li>
+          </ul>
+        </div>
+
+        <div class="mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Security Research & Projects</h2>
+          <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 mb-4">
+            <li><strong>Rockstar Games (HackerOne)</strong> — Awarded bounty for discovering a critical server-side vulnerability affecting multiplayer platforms (2025).</li>
+            <li><strong>TryHackMe Labs</strong> — Documented labs on network analysis, scanning, and SIEM basics; published walkthroughs on GitHub.</li>
+            <li><strong>Hackathons</strong> — Built secure voice-transcription and unikernel deployments emphasizing data privacy and minimized attack surface.</li>
+          </ul>
+        </div>
+
+        <div class="mb-8">
+          <blockquote class="border-l-4 border-primary-600 pl-4 italic text-gray-700 dark:text-gray-300">"Innovation is the bridge between imagination and reality."</blockquote>
+        </div>
+
+        <div class="mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Next steps / How I can help</h2>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">I'm looking for entry-level security roles (incident monitoring, log analysis, threat detection) or collaborative research on game-server security. I can contribute to:</p>
+          <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+            <li>Vulnerability discovery and responsible disclosure</li>
+            <li>Log and telemetry analysis for threat hunting</li>
+            <li>Secure coding reviews and server hardening</li>
+            <li>Building detection rules and lightweight SIEM workflows</li>
+          </ul>
+          <p class="mt-4 text-gray-700 dark:text-gray-300">Contact me: <a href="mailto:galves46@proton.me" class="text-primary-600 dark:text-primary-400 hover:underline">galves46@proton.me</a></p>
         </div>
       </div>
     </div>
